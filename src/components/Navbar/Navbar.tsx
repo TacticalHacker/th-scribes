@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import THLogo from "../assets/TH-Scribes-Logo.png"; // Import the logo
+import THLogo from "../../assets/TH-Scribes-Logo.png"; // Import the logo
 
 interface NavbarProps {
   onLoginClick: () => void;

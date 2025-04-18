@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import LoginPopup from "./components/LoginPopup";
-import SignupPopup from "./components/SignupPopup";
-import LandingPage from "./components/LandingPage";
+import Navbar from "./components/Navbar/Navbar";
+import LoginPopup from "./components/LoginPopup/LoginPopup";
+import SignupPopup from "./components/SignupPopup/SignupPopup";
+import LandingPage from "./components/LandingPage/LandingPage";
 import "./App.css";
 
 const App: React.FC = () => {

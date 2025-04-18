@@ -1,6 +1,6 @@
 import React from "react";
 import "./LoginPopup.css";
-import THLogo from "../assets/TH-Logo.png"; // Import the logo
+import THLogo from "../assets/TH-Scribes-Logo.png"; // Import the logo
 
 interface LoginPopupProps {
   onClose: () => void;

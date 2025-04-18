@@ -1,0 +1,62 @@
+.navbar {
+  position: fixed; /* Fix the navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make it fill the width */
+  display: flex;
+  justify-content: center; /* Center the navbar content */
+  align-items: center;
+  padding: 0.5rem 2rem; /* Add padding for neatness */
+  background-color: #0056b3; /* Dark blue background */
+  color: white;
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.navbar-content {
+  width: 100%;
+  max-width: 1200px; /* Constrain the navbar content to a maximum width */
+  display: flex;
+  justify-content: space-between; /* Space out the brand and links */
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white; /* Ensure the title is white */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem; /* Add spacing between buttons */
+}
+
+.navbar-links .navbar-button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745; /* Green for buttons */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; /* Add slight rounding for a modern look */
+  font-size: 1rem;
+}
+
+.navbar-links .navbar-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Add spacing between the logo and title */
+}
+
+.navbar-logo {
+  width: 40px; /* Set the logo width */
+  height: 40px; /* Set the logo height */
+  border-radius: 50%; /* Make the logo circular */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(204, 204, 204, 0.5)); /* Add a faded gradient */
+  padding: 5px; /* Add padding inside the gradient */
+  box-sizing: border-box; /* Ensure padding doesn't affect the size */
+}

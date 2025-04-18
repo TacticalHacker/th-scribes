@@ -1,8 +1,11 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%; /* Make the root element span the full width */
+  height: 100%; /* Make the root element span the full height */
+  margin: 0; /* Remove auto-centering */
+  padding: 0; /* Remove extra padding */
+  background-color: #ffffff; /* Set the background color to white */
+  display: flex; /* Use flexbox to align content */
+  flex-direction: column; /* Stack child elements vertically */
 }
 
 .logo {

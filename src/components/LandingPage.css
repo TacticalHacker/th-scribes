@@ -1,0 +1,38 @@
+.landing-page {
+  width: 100%; /* Use 100% to avoid horizontal overflow caused by 100vw */
+  height: 100vh; /* Make it cover the full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  background-color: #f8f9fa; /* Light gray background */
+  color: #333; /* Dark gray text */
+  text-align: center; /* Center-align text */
+  padding: 2rem; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.landing-image {
+  max-width: 300px; /* Set a maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 2rem; /* Add spacing below the image */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(204, 204, 204, 0.5)); /* Add a faded gradient */
+  padding: 10px; /* Add padding inside the gradient */
+  box-sizing: border-box; /* Ensure padding doesn't affect the size */
+}
+
+.landing-page h2 {
+  font-size: 2rem;
+  color: #0056b3; /* Dark blue for the heading */
+  margin-bottom: 1rem;
+}
+
+.landing-page p {
+  font-size: 1.2rem;
+  color: #555; /* Medium gray for the text */
+  max-width: 600px; /* Constrain the text width */
+  margin: 0 auto; /* Center the text */
+  line-height: 1.6; /* Improve readability */
+}

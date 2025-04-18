@@ -1,24 +1,26 @@
-name: Github Pages Deploy
+name: PR
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types:
+      - assigned
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
     paths: [
       'src/**',
       'public/**',
       '**/package*.json',
       '**workflows/**.yml'
-    ] 
-  
-  workflow_dispatch:
+    ]
 
 permissions: write-all # Required for the GitHub Pages action to deploy
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+concurrency: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
 
 jobs:
-  Frontend-Deploy:
+  Frontend-Build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -34,9 +36,3 @@ jobs:
 
       - name: Build Vite-React app
         run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist

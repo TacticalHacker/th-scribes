@@ -1,9 +1,6 @@
 import type React from 'react';
 import { useState } from 'react';
-import Navbar from './components/Navbar/Navbar';
-import LoginPopup from './components/LoginPopup/LoginPopup';
-import SignupPopup from './components/SignupPopup/SignupPopup';
-import LandingPage from './components/LandingPage/LandingPage';
+import { Navbar, LoginPopup, SignupPopup, LandingPage } from '@components';
 import './App.css';
 
 const App: React.FC = () => {

@@ -4,11 +4,23 @@ on:
   push:
     branches:
       - main
+    paths: [
+      'src/**',
+      'public/**',
+      'package.json',
+      'package-lock.json',
+      '.github/workflows/on-merge.yml'
+    ]
+  
+  workflow_dispatch:
+
+permissions: write-all # Required for the GitHub Pages action to deploy
+
+concurrency: ${ { github.workflow }}-${{ github.ref }}
 
 jobs:
-  build:
+  Frontend-Deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import "./Navbar.css";
 import THLogo from "../../assets/TH-Scribes-Logo.png"; // Import the logo
 
@@ -16,10 +16,10 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onSignupClick }) => {
           <h1 className="navbar-title">Tactical Hacker Scribes</h1>
         </div>
         <div className="navbar-links">
-          <button onClick={onLoginClick} className="navbar-button">
+          <button type="button" onClick={onLoginClick} className="navbar-button">
             Login
           </button>
-          <button onClick={onSignupClick} className="navbar-button">
+          <button type="button" onClick={onSignupClick} className="navbar-button">
             Signup
           </button>
         </div>

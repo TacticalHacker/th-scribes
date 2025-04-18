@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import LoginPopup from "./components/LoginPopup/LoginPopup";
-import SignupPopup from "./components/SignupPopup/SignupPopup";
-import LandingPage from "./components/LandingPage/LandingPage";
-import "./App.css";
+import type React from 'react';
+import { useState } from 'react';
+import { Navbar, LoginPopup, SignupPopup, LandingPage } from '@components';
+import './App.css';
 
 const App: React.FC = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -11,10 +9,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <Navbar
-        onLoginClick={() => setShowLogin(true)}
-        onSignupClick={() => setShowSignup(true)}
-      />
+      <Navbar onLoginClick={() => setShowLogin(true)} onSignupClick={() => setShowSignup(true)} />
       <LandingPage />
       {showLogin && <LoginPopup onClose={() => setShowLogin(false)} />}
       {showSignup && <SignupPopup onClose={() => setShowSignup(false)} />}

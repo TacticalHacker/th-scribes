@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/',
+  base: '/th-scribes',
   resolve: {
     alias: {
       '@api': path.resolve(__dirname, './src/api'),

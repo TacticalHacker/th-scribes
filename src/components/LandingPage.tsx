@@ -1,6 +1,6 @@
 import React from "react";
 import "./LandingPage.css";
-import THLogo from "../assets/TH-Logo.png"; // Import the logo
+import THLogo from "../assets/TH-Scribes-Logo.png"; // Import the logo
 
 const LandingPage: React.FC = () => {
   return (

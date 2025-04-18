@@ -1,0 +1,44 @@
+{
+	"name": "template-frontend",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"preview": "vite preview",
+		"deploy": "gh-pages -d dist",
+		"lint": "biome check --write --unsafe",
+		"prepare": "husky ./.husky"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx --no lint-staged"
+	},
+	"lint-staged": {
+		"*": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
+	},
+	"dependencies": {
+		"@tailwindcss/vite": "^4.1.4",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "~1.9.4",
+		"@commitlint/cli": "^19.8.0",
+		"@commitlint/config-conventional": "^19.8.0",
+		"@tailwindcss/postcss": "^4.1.4",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"@vitejs/plugin-react": "^4.3.4",
+		"autoprefixer": "^10.4.21",
+		"cspell": "^8.18.1",
+		"gh-pages": "^6.3.0",
+		"globals": "^15.15.0",
+		"husky": "^9.1.7",
+		"postcss": "^8.5.3",
+		"tailwindcss": "^4.1.4",
+		"typescript": "~5.7.2",
+		"typescript-eslint": "^8.24.1",
+		"vite": "^6.2.0"
+	}
+}
